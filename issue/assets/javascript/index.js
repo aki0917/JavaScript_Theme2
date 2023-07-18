@@ -1,14 +1,14 @@
 //定義
 
-const fizzInput = document.getElementById('fizzNum');
+const fizzInput = document.getElementById('fizz-num');
 //console.log(fizzInput);
-const buzzInput = document.getElementById('buzzNum');
+const buzzInput = document.getElementById('buzz-num');
 // console.log(buzzInput);
-const runButton = document.getElementById('runButton');
+const runButton = document.getElementById('run-button');
 // console.log(runButton);
-const resultArea = document.getElementById('resultArea');
+const resultArea = document.getElementById('result-area');
 //console.log(resultArea);
-const errorMessage = document.getElementById('errorMessage');
+const errorMessage = document.getElementById('error-message');
 //console.log(errorDisplay);
 
 
@@ -16,7 +16,8 @@ const errorMessage = document.getElementById('errorMessage');
 
 const fizzBuzz = (fizzNum, buzzNum) => {
 
-  let result = [];
+  //再代入されない
+  const result = [];
 
   for (let i = 1; i <= 99; i++) {
     if (i % fizzNum === 0 && i % buzzNum === 0) {
@@ -42,12 +43,12 @@ runButton.addEventListener('click', () => {
   errorMessage.textContent = '';
   //console.log(errorMessage);
 
-  
-  let fizzNum = parseInt(fizzInput.value);
+  //再代入されない
+  const fizzNum = parseInt(fizzInput.value);
   //console.log(fizzNum);
-  let buzzNum = parseInt(buzzInput.value);
+  const buzzNum = parseInt(buzzInput.value);
   //console.log(buzzNum);
-  let result = fizzBuzz(fizzNum, buzzNum);
+  const result = fizzBuzz(fizzNum, buzzNum);
   //console.log(result);
   
   if (!isValidInput(fizzNum) || !isValidInput(buzzNum)) {
